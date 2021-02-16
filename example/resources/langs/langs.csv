@@ -1,0 +1,26 @@
+str,en_US,ar_DZ,de_DE,ru_RU,vi_VN
+title,Hello,السلام,Hallo,Привет!,Xin chào
+msg,Hello {} in the {} world,السلام عليكم يا {} في عالم {},Hallo {} in der {} welt,Привет! {} добро пожаловать {} мир!,Xin chào {} trong thế giới {}
+msg_named,{} are written in the {lang} language,{} مكتوبة باللغة {lang},{} ist in {lang} geschrieben,{} написан на языке {lang},{} được viết bằng tiếng {lang}
+clickMe,Click me,إضغط هنا,Click mich,Нажми на меня,Bấm vào tôi
+profile.reset_password.label,Reset Password,اعادة تعين كلمة السر,Password zurГјcksetzten,Сбросить пароль,Thay đổi mật khẩu
+profile.reset_password.username,Username,المستخدم,Name,Логин,Tên người dùng
+profile.reset_password.password,password,كلمة السر,Password,Пароль,Mật khẩu
+clicked.zero,You clicked {} times!,{} نقرة!,Du hast {} mal geklickt,Ты кликнул {} раз!,Bạn đã nhấn {} lần!
+clicked.one,You clicked {} time!,{} نقرة!,Du hast {} mal geklickt,Ты кликнул {} раз!,Bạn đã nhấn {} lần!
+clicked.two,You clicked {} times!,{} نقرات!,Du hast {} mal geklickt,Ты кликнул {} раза!,Bạn đã nhấn {} lần!
+clicked.few,You clicked {} times!,{} نقرات!,Du hast {} mal geklickt,Ты кликнул {} раз!,Bạn đã nhấn {} lần!
+clicked.many,You clicked {} times!,{} نقرة!,Du hast {} mal geklickt,Ты кликнул {} раз!,Bạn đã nhấn {} lần!
+clicked.other,You clicked {} times!,{} نقرة!,Du hast {} mal geklickt,Ты кликнул {} раз!,Bạn đã nhấn {} lần!
+amount.zero,Your amount : {},المبلغ : {},Deine Klicks: {},Твой счет : {},Số tiền của bạn : {}
+amount.one,Your amount : {},المبلغ : {},Deine Klicks: {},Твой счет : {},Số tiền của bạn : {}
+amount.two,Your amount : {},المبلغ : {},Deine Klicks: {},Твой счет : {},Số tiền của bạn : {}
+amount.few,Your amount : {},المبلغ : {},Deine Klicks: {},Твой счет : {},Số tiền của bạn : {}
+amount.many,Your amount : {},المبلغ : {},Deine Klicks: {},Твой счет : {},Số tiền của bạn : {}
+amount.other,Your amount : {},المبلغ : {},Deine Klicks: {},Твой счет : {},Số tiền của bạn : {}
+gender.male,Hi man ;),مرحبا يا رجل,Hi Mann ;),Привет мужык ;),Xin chào bạn nam ;)
+gender.female,Hello girl :),مرحبا بك يا فتاة,Hallo Frau :),Привет девчуля :),Xin chào bạn nữ :)
+gender.with_arg.male,Hi man ;) {},{} مرحبا يا رجل,Hi Mann ;) {},Привет мужык ;) {},Xin chào bạn nam ;) {}
+gender.with_arg.female,Hello girl :) {},{} مرحبا بك يا فتاة,Hallo Frau :) {},Привет девчуля :) {},Xin chào bạn nữ :) {}
+reset_locale,Reset Saved Language,إعادة تعيين اللغة المحفوظة,Gespeicherte Sprache zurГјcksettzen,Сбросить сохраненный язык,Trở về ngôn ngữ đã lưu
+supported_language,Supported language: {}, اللغة المدعومة : {},Unterstützte Sprache: {},Поддерживаемый язык: {},Ngôn ngữ hỗ trợ: {}

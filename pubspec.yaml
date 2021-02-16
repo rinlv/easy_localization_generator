@@ -1,0 +1,25 @@
+name: easy_localization_generator
+description: A new Flutter package.
+version: 0.0.1
+author: Rin Luu Van <rinlv.hn@gmail.com>
+homepage:
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  analyzer: ^0.41.2
+  build: ^1.6.2
+  build_config: ^0.4.5
+  source_gen: ^0.9.10+2
+  http: ^0.12.2
+  path: ^1.7.0
+  csv: ^4.1.0
+  intl: ^0.16.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
