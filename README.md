@@ -1,4 +1,15 @@
-# Easy Localization Generator
+# easy_localization_generator
+
+![Pub Version](https://img.shields.io/pub/v/easy_localization_generator?style=flat-square)
+![Code Climate issues](https://img.shields.io/github/issues/rinlv/easy_localization_generator?style=flat-square)
+![GitHub closed issues](https://img.shields.io/github/issues-closed/rinlv/easy_localization_generator?style=flat-square)
+![GitHub contributors](https://img.shields.io/github/contributors/rinlv/easy_localization_generator?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/rinlv/easy_localization_generator?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/rinlv/easy_localization_generator?style=flat-square)
+![GitHub stars](https://img.shields.io/github/stars/rinlv/easy_localization_generator?style=flat-square)
+![GitHub license](https://img.shields.io/github/license/rinlv/easy_localization_generator?style=flat-square)
+
+## Easy Localization Generator
 
 Download CSV file and generates the localization keys from an online Google Sheet to working with [easy_localization](https://pub.dev/packages/easy_localization) and [easy_localization_loader](https://pub.dev/packages/easy_localization_loader)
 
