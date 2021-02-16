@@ -8,6 +8,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/rinlv/easy_localization_generator?style=flat-square)
 ![GitHub stars](https://img.shields.io/github/stars/rinlv/easy_localization_generator?style=flat-square)
 ![GitHub license](https://img.shields.io/github/license/rinlv/easy_localization_generator?style=flat-square)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
 
 ## Easy Localization Generator
 
