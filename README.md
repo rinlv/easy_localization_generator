@@ -1,6 +1,6 @@
 # easy_localization_generator
 
-![Pub Version](https://img.shields.io/pub/v/easy_localization_generator?style=flat-square)
+[![Pub](https://img.shields.io/pub/v/easy_localization_generator.svg)](https://pub.dev/packages/easy_localization_generator)
 ![Code Climate issues](https://img.shields.io/github/issues/rinlv/easy_localization_generator?style=flat-square)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed/rinlv/easy_localization_generator?style=flat-square)
 ![GitHub contributors](https://img.shields.io/github/contributors/rinlv/easy_localization_generator?style=flat-square)
