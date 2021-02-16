@@ -2,7 +2,8 @@ name: easy_localization_generator
 description: A new Flutter package.
 version: 0.0.1
 author: Rin Luu Van <rinlv.hn@gmail.com>
-homepage:
+homepage: https://github.com/rinlv/easy_localization_generator
+issue_tracker: https://github.com/rinlv/easy_localization_generator/issues
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
