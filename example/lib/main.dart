@@ -1,9 +1,6 @@
-import 'dart:ui';
-
 import 'package:easy_localization/easy_localization.dart';
 import 'package:easy_localization_loader/easy_localization_loader.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
 
 import 'lang_view.dart';
 import 'localization/locale_keys.dart';
@@ -51,9 +48,9 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, this.title}) : super(key: key);
 
-  final String title;
+  final String? title;
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -79,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(LocaleKeys.title).tr(context: context),
+        title: Text(LocaleKeys.title).tr(),
         //Text(AppLocalizations.of(context).tr('title')),
         actions: <Widget>[
           FlatButton(
@@ -125,14 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   fontSize: 15,
                   fontWeight: FontWeight.bold),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Icon(FontAwesome.male),
-                Switch(value: _gender, onChanged: switchGender),
-                Icon(FontAwesome.female),
-              ],
-            ),
+            Center(child: Switch(value: _gender, onChanged: switchGender)),
             Spacer(
               flex: 1,
             ),

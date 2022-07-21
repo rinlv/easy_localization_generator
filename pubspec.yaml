@@ -6,20 +6,20 @@ homepage: https://github.com/rinlv/easy_localization_generator
 issue_tracker: https://github.com/rinlv/easy_localization_generator/issues
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
-  flutter: ">=1.17.0"
+  sdk: ">=2.17.0 <3.0.0"
+  flutter: '>=2.5.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  analyzer: ^0.41.2
-  build: ^1.6.2
-  build_config: ^0.4.5
-  source_gen: ^0.9.10+2
-  http: ^0.12.2
-  path: ^1.7.0
-  csv: ^4.1.0
-  intl: ^0.16.1
+  analyzer: ^4.2.0
+  build: ^2.3.0
+  build_config: ^1.1.0
+  source_gen: ^1.2.2
+  http: ^0.13.4
+  path: ^1.8.1
+  csv: ^5.0.1
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:
