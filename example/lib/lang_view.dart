@@ -1,7 +1,7 @@
 import 'dart:developer';
 
-import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
 
 class LanguageView extends StatelessWidget {
   @override
@@ -40,33 +40,32 @@ class LanguageView extends StatelessWidget {
                 context: context,
                 title: 'عربي',
                 subtitle: 'عربي',
-                locale:
-                    context.supportedLocales[1] //BuildContext extension method
+                locale: context.supportedLocales[1] //BuildContext extension method
                 ),
             buildDivider(),
             buildSwitchListTileMenuItem(
                 context: context,
                 title: 'English',
                 subtitle: 'English',
-                locale: EasyLocalization.of(context).supportedLocales[0]),
+                locale: EasyLocalization.of(context)?.supportedLocales[0]),
             buildDivider(),
             buildSwitchListTileMenuItem(
                 context: context,
                 title: 'German',
                 subtitle: 'German',
-                locale: EasyLocalization.of(context).supportedLocales[2]),
+                locale: EasyLocalization.of(context)?.supportedLocales[2]),
             buildDivider(),
             buildSwitchListTileMenuItem(
                 context: context,
                 title: 'Русский',
                 subtitle: 'Русский',
-                locale: EasyLocalization.of(context).supportedLocales[3]),
+                locale: EasyLocalization.of(context)?.supportedLocales[3]),
             buildDivider(),
             buildSwitchListTileMenuItem(
                 context: context,
                 title: 'Vietnamese',
                 subtitle: 'Vietnamese',
-                locale: EasyLocalization.of(context).supportedLocales[4]),
+                locale: EasyLocalization.of(context)?.supportedLocales[4]),
             buildDivider(),
           ],
         ),
@@ -84,7 +83,7 @@ class LanguageView extends StatelessWidget {
       );
 
   Container buildSwitchListTileMenuItem(
-      {BuildContext context, String title, String subtitle, Locale locale}) {
+      {required BuildContext context, String? title, String? subtitle, Locale? locale}) {
     return Container(
       margin: EdgeInsets.only(
         left: 10,
@@ -95,14 +94,14 @@ class LanguageView extends StatelessWidget {
           dense: true,
           // isThreeLine: true,
           title: Text(
-            title,
+            title ?? '',
           ),
           subtitle: Text(
-            subtitle,
+            subtitle ?? '',
           ),
-          onTap: () async{
+          onTap: () async {
             log(locale.toString(), name: toString());
-            context.setLocale(locale); //BuildContext extension method
+            context.setLocale(locale ?? Locale('en', 'US')); //BuildContext extension method
             Navigator.pop(context);
           }),
     );

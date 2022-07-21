@@ -1,5 +1,5 @@
 class SheetLocalization {
-  final String docId;
+  final String? docId;
   final int version;
   final String outDir; //output directory
   final String outName; //output file name
