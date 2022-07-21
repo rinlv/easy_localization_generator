@@ -10,6 +10,10 @@
 ![GitHub license](https://img.shields.io/github/license/rinlv/easy_localization_generator?style=flat-square)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
 
+## OPTION 2: Easy Localization Generator with [flutter_gen](https://github.com/FlutterGen/flutter_gen)
+
+I forked and then added some code, which make Easy Localization Generator can working with it. Please checkout [here](https://github.com/rinlv/flutter_gen).
+
 ## Easy Localization Generator
 
 Download CSV file and generates the localization keys from an online Google Sheet to working with [easy_localization](https://pub.dev/packages/easy_localization) and [easy_localization_loader](https://pub.dev/packages/easy_localization_loader)
