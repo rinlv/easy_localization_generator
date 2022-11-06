@@ -72,9 +72,9 @@ class CSVParser {
   String getSupportedLocales() {
     final locales = lines.first.sublist(1, lines.first.length).map((e) {
       final languages = e.toString().split('_');
-      return "const Locale('${languages[0]}', '${languages[1]}')";
+      return "Locale('${languages[0]}', '${languages[1]}')";
     }).toList();
-    return 'static const supportedLocales = const [\n${locales.join(',\n')}\n];';
+    return 'static const supportedLocales = [\n${locales.join(',\n')}\n];';
   }
 
   String getLocaleKeys(List<String?> preservedKeywords) {
@@ -95,14 +95,14 @@ class CSVParser {
       if (group1[0] != group2[0]) {
         strBuilder.writeln('\n   // ${group1[0]}');
       }
-      strBuilder.writeln('static const ${_joinKey(group1)} = \'${keys[idx]}\';');
+      strBuilder.writeln('static String get ${_joinKey(group1)} => \'${keys[idx]}\'.tr();');
     }
     return strBuilder.toString();
   }
 
   void _groupKey(StringBuffer strBuilder, List<String> group, String key) {
     strBuilder.writeln('\n   // ${group[0]}');
-    strBuilder.writeln('static const ${_joinKey(group)} = \'$key\';');
+    strBuilder.writeln('static String get ${_joinKey(group)} => \'$key\'.tr();');
   }
 
   void _reNewKeys(List<String?> preservedKeywords, List<String> newKeys, String key) {
