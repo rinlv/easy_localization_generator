@@ -117,7 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
               name: 'Jack',
               type: 'Hot',
             )),
-            Text(Strings.clicked(counter, count: counter.toString())),
+            Text(Strings.clicked(counter, count: counter)),
             ElevatedButton(
               onPressed: () {
                 incrementCounter();

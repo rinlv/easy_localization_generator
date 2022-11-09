@@ -101,7 +101,7 @@ class CSVParser {
         if (args.isNotEmpty) {
           strBuilder.write('namedArgs: {');
           for (final String arg in args) {
-            strBuilder.write('\'$arg\': $arg, ');
+            strBuilder.write('\'$arg\': $arg.toString(), ');
           }
           strBuilder.write('},');
         }
