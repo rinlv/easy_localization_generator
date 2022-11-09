@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Spacer(
               flex: 1,
             ),
-            Text(Strings.supportedLanguage.tr(args: [Strings.supportedLocales.length.toString()]),
+            Text(Strings.supportedLanguage(language: Strings.supportedLocales.length.toString()),
                 style: TextStyle(color: Colors.grey.shade600, fontSize: 19, fontWeight: FontWeight.bold)),
             Spacer(
               flex: 1,
@@ -104,18 +104,20 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               Strings.gender,
               style: TextStyle(color: Colors.grey.shade600, fontSize: 19, fontWeight: FontWeight.bold),
-            ).tr(args: ['aissat'], gender: _gender ? 'female' : 'male'),
-            Text(
-              tr(Strings.gender, gender: _gender ? 'female' : 'male'),
-              style: TextStyle(color: Colors.grey.shade600, fontSize: 15, fontWeight: FontWeight.bold),
-            ),
+            ).tr(gender: _gender ? 'female' : 'male'),
             Center(child: Switch(value: _gender, onChanged: switchGender)),
             Spacer(
               flex: 1,
             ),
-            Text(Strings.msg).tr(args: ['aissat', 'Flutter']),
-            Text(Strings.msgNamed).tr(namedArgs: {'lang': 'Dart'}, args: ['Easy localization']),
-            Text(Strings.clicked).plural(counter),
+            Text(Strings.amount(counter)),
+            Spacer(
+              flex: 1,
+            ),
+            Text(Strings.msg(
+              name: 'Jack',
+              type: 'Hot',
+            )),
+            Text(Strings.clicked(counter, count: counter.toString())),
             ElevatedButton(
               onPressed: () {
                 incrementCounter();
@@ -125,8 +127,6 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(
               height: 15,
             ),
-            Text(plural(Strings.amount, counter, format: NumberFormat.currency(locale: Intl.defaultLocale, symbol: '€')),
-                style: TextStyle(color: Colors.grey.shade900, fontSize: 18, fontWeight: FontWeight.bold)),
             SizedBox(
               height: 20,
             ),
