@@ -6,7 +6,7 @@ part of 'strings.dart';
 // LocalizationGenerator
 // **************************************************************************
 
-// Generated at: Wed, 09 Nov 2022 21:56:23 +08:00
+// Generated at: Thu, 10 Nov 2022 11:28:02 +07:00
 class Strings {
   static const supportedLocales = [
     Locale('en', 'US'),
@@ -41,7 +41,7 @@ class Strings {
       'clicked'.plural(
         countForUnit,
         namedArgs: {
-          'count': count,
+          'count': count.toString(),
         },
       );
 
@@ -60,7 +60,7 @@ class Strings {
   }) =>
       'gender.with_arg'.tr(
         namedArgs: {
-          'name': name,
+          'name': name.toString(),
         },
       );
 
@@ -73,7 +73,7 @@ class Strings {
   }) =>
       'supported_language'.tr(
         namedArgs: {
-          'language': language,
+          'language': language.toString(),
         },
       );
 
@@ -84,8 +84,8 @@ class Strings {
   }) =>
       'msg'.tr(
         namedArgs: {
-          'name': name,
-          'type': type,
+          'name': name.toString(),
+          'type': type.toString(),
         },
       );
 
@@ -95,7 +95,7 @@ class Strings {
   }) =>
       'hello'.tr(
         namedArgs: {
-          'name': name,
+          'name': name.toString(),
         },
       );
 }

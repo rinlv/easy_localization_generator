@@ -90,14 +90,14 @@ class CSVParser {
         strBuilder.write(') => ');
         strBuilder.write('\'${item.key}\'');
 
-        // Choose api of tranlsation.
+        // Choose api of translation.
         if (item.isPlural) {
           strBuilder.write('.plural(countForUnit, ');
         } else {
           strBuilder.write('.tr(');
         }
 
-        // Write named args for api of tranlsation.
+        // Write named args for api of translation.
         if (args.isNotEmpty) {
           strBuilder.write('namedArgs: {');
           for (final String arg in args) {
