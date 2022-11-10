@@ -1,0 +1,26 @@
+str,en_US,zh_TW,ar_DZ,de_DE,ru_RU,vi_VN
+title,Hello,你好,مرحبًا,Hallo,добры дзень,Xin chào
+clickMe,Click me,點我,أنا أشير,Ich zeige,Я паказваю,tôi chỉ
+profile.reset_password.label,Reset Password,重設密碼,إعادة تعيين كلمة المرور,Passwort zurücksetzen,скінуць пароль,đặt lại mật khẩu
+profile.reset_password.username,Username,用戶名,اسم االمستخدم,Nutzername,імя карыстальніка,tên tài khoản
+profile.reset_password.password,password,密碼,كلمه السر,Passwort,пароль,mật khẩu mở khóa
+clicked.zero,You clicked {count} times!,您點擊了 {count} 次！,لقد نقرت على {count} مرة!,Sie haben {count} Mal geklickt!,Вы націснулі {count} разоў!,Bạn đã nhấp vào {count} lần!
+clicked.one,You clicked {count} time!,您點擊了 {count} 次！,لقد نقرت على {count} مرة!,Sie haben {count} Mal geklickt!,Вы націснулі {count} разоў!,Bạn đã nhấp vào {count} lần!
+clicked.two,You clicked {count} times!,您點擊了 {count} 次！,لقد نقرت على {count} مرة!,Sie haben {count} Mal geklickt!,Вы націснулі {count} разоў!,Bạn đã nhấp vào {count} lần!
+clicked.few,You clicked {count} times!,您點擊了 {count} 次！,لقد نقرت على {count} مرة!,Sie haben {count} Mal geklickt!,Вы націснулі {count} разоў!,Bạn đã nhấp vào {count} lần!
+clicked.many,You clicked {count} times!,您點擊了 {count} 次！,لقد نقرت على {count} مرة!,Sie haben {count} Mal geklickt!,Вы націснулі {count} разоў!,Bạn đã nhấp vào {count} lần!
+clicked.other,You clicked {count} times!,您點擊了 {count} 次！,لقد نقرت على {count} مرة!,Sie haben {count} Mal geklickt!,Вы націснулі {count} разоў!,Bạn đã nhấp vào {count} lần!
+amount.zero,Your amount : {},您的金額：{},المبلغ : {},Deine Klicks: {},Твой счет : {},Số tiền của bạn : {}
+amount.one,Your amount : {},您的金額：{},المبلغ : {},Deine Klicks: {},Твой счет : {},Số tiền của bạn : {}
+amount.two,Your amount : {},您的金額：{},المبلغ : {},Deine Klicks: {},Твой счет : {},Số tiền của bạn : {}
+amount.few,Your amount : {},您的金額：{},المبلغ : {},Deine Klicks: {},Твой счет : {},Số tiền của bạn : {}
+amount.many,Your amount : {},您的金額：{},المبلغ : {},Deine Klicks: {},Твой счет : {},Số tiền của bạn : {}
+amount.other,Your amount : {},您的金額：{},المبلغ : {},Deine Klicks: {},Твой счет : {},Số tiền của bạn : {}
+gender.male,Hi man ;),餵伙計 ;）,مرحبا يا رجل ؛),Hallo Mann ;),прывітанне чалавек;),xin chao anh bạn ;)
+gender.female,Hello girl :),你好姑娘 ：）,مرحبا بك ايتها الفتاة :),hallo Mädchen :),прывітанне дзяўчынка :),chào cô gái :)
+gender.with_arg.male,Hi man ;) I am {name}.,餵伙計 ;）I am {name}.,مرحبا صديقي؛) انا {name}.,Hallo Kumpel ;) Ich bin {Name}.,"Прывітанне, сябар ;) Я {name}.",Xin chào bạn thân;) Tôi là {name}.
+gender.with_arg.female,Hello girl :) I am {name}.,你好姑娘 ：）I am {name}.,مرحبا فتاة :) انا {name}.,Hallo Mädchen :) Ich bin {Name}.,"Прывітанне, дзяўчынка :) Я {name}.",Xin chào cô gái :) Tôi là {name}.
+reset_locale,Reset Saved Language,重置保存的語言,إعادة تعيين اللغة المحفوظة,Zurücksetzen einer gespeicherten Sprache,Скінуць захаваную мову,Đặt lại ngôn ngữ đã lưu
+supported_language,Supported language: {language},支持的語言：{language},اللغات المدعومة: {language},Unterstützte Sprachen: {Sprache},"Мовы, якія падтрымліваюцца: {language}",Các ngôn ngữ được hỗ trợ: {language}
+msg,Hello {name} in the {type} world,您好 {name} 在 {type} 世界,مرحبًا {name} في {type} العالم,Hallo {name} in der Welt von {type},"Прывітанне, {name}, у свеце {type}",Xin chào {name} trong thế giới {type}
+hello,Hello -  {name},哈囉 -  {name},مرحبًا - {name},Hallo - {Name},Прывітанне - {name},Xin chào - {name}
