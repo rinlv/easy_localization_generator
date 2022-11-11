@@ -37,11 +37,11 @@ dev_dependencies:
 Create a sheet with your translations. Make sure that all dynamic-arg strings have names of arg. It will generate readable functions of translation to use.
  (following the bellow format, [an example sheet is available here](https://docs.google.com/spreadsheets/d/1hK27E8bIxU8rrOduGJWLTD2QRR1ALs6lyW7dPNZ3N74/edit?usp=sharing)) :
 
-![google sheet example](demo/google_sheet.png)
+![google sheet example](./demo/google_sheet.png)
 
 Make sure that your sheet is shared.
 
-![share](demo/share.png)
+![share](./demo/share.png)
 
 Extract from the link the `DOCID` value : `https://docs.google.com/spreadsheets/d/<DOCID>/edit?usp=sharing`
 
