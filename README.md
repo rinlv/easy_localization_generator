@@ -41,11 +41,11 @@ dev_dependencies:
 Create a sheet with your translations. Make sure that all dynamic-arg strings have names of arg. It will generate readable functions of translation to use.
  (following the bellow format, [an example sheet is available here](https://docs.google.com/spreadsheets/d/1v2Y3e0Uvn0JTwHvsduNT70u7Fy9TG43DIcZYJxPu1ZA/edit?usp=sharing)) :
 
-![csv example file](https://raw.githubusercontent.com/rinlv/easy_localization_generator/main/csv_example.png)
+<img src="./demo/csv_example.png" />
 
 Make sure that your sheet is shared.
 
-![share](https://raw.githubusercontent.com/rinlv/easy_localization_generator/main/share.png)
+<img src="./demo/share.png" />
 
 Extract from the link the `DOCID` value : `https://docs.google.com/spreadsheets/d/<DOCID>/edit?usp=sharing`
 
@@ -108,11 +108,14 @@ Text(
 ##### Text with plural
 1. no named arg version
 <img src="./demo/plural_1.png" />
+
 ``` dart
 Text(Strings.amount(counter))
 ```
+
 2. named arg version (recommend)
 <img src="./demo/plural_2.png" />
+
 ``` dart
 Text(
   Strings.clicked(
