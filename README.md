@@ -38,21 +38,21 @@ dev_dependencies:
 
 #### 1. Create a CSV Google Sheet
 
-Create a sheet with your translations (following the bellow format, [an example sheet is available here](https://docs.google.com/spreadsheets/d/1v2Y3e0Uvn0JTwHvsduNT70u7Fy9TG43DIcZYJxPu1ZA/edit?usp=sharing)) :
+Create a sheet with your translations. Make sure that all dynamic-arg strings have names of arg. It will generate readable functions of translation to use.
+ (following the bellow format, [an example sheet is available here](https://docs.google.com/spreadsheets/d/1v2Y3e0Uvn0JTwHvsduNT70u7Fy9TG43DIcZYJxPu1ZA/edit?usp=sharing)) :
 
 ![csv example file](https://raw.githubusercontent.com/rinlv/easy_localization_generator/main/csv_example.png)
 
-Make sure that your sheet is shared :
+Make sure that your sheet is shared.
 
 ![share](https://raw.githubusercontent.com/rinlv/easy_localization_generator/main/share.png)
 
-Extract from the link the `DOCID` value : `https://docs.google.com/spreadsheets/d/<DOCID>/edit?usp=sharing`) :
+Extract from the link the `DOCID` value : `https://docs.google.com/spreadsheets/d/<DOCID>/edit?usp=sharing`
 
 #### 2. Declare a localization delegate
 
-Declare the following `_LocaleKeys` class with the `SheetLocalization` annotation pointing to your sheet in a `lib/localization/locale_keys.dart` file :
-
-```dart
+Declare the following `_LocaleKeys` class with the `SheetLocalization` annotation pointing to your sheet in a `lib/localization/locale_keys.dart` file
+``` dart
 import 'dart:ui';
 
 import 'package:easy_localization_generator/easy_localization_generator.dart';
@@ -82,14 +82,45 @@ class _LocaleKeys {}
 
 Run the following command to generate a `lib/localization/locale_keys.g.dart` file :
 
-```
-flutter pub run build_runner build
+``` bash
+flutter pub run build_runner build --delete-conflicting-outputs
 ```
 
 Sample of [locale_keys.g.dart](https://github.com/rinlv/easy_localization_generator/blob/main/example/lib/localization/locale_keys.g.dart)
 
 #### 4. Configure your app
-Last, config step by step following this tutorial from [README.md of easy_localization ](https://github.com/aissat/easy_localization/blob/develop/README.md)
+Config step by step following this tutorial from [README.md of easy_localization ](https://github.com/aissat/easy_localization/blob/develop/README.md)
+
+#### 5. Development
+##### Simple text
+``` dart
+Text(Strings.title)
+```
+##### Text with args
+``` dart
+Text(
+  Strings.msg(
+    name: 'Jack',
+    type: 'Hot',
+  ),
+),
+```
+##### Text with plural
+1. no named arg version
+<img src="./demo/plural_1.png" />
+``` dart
+Text(Strings.amount(counter))
+```
+2. named arg version (recommend)
+<img src="./demo/plural_2.png" />
+``` dart
+Text(
+  Strings.clicked(
+    counter,
+    count: counter,
+  ),
+),
+```
 
 ### ⚡ Regeneration
 
