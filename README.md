@@ -103,13 +103,15 @@ Text(
 ),
 ```
 ##### Text with plural
-1. no named arg version
+- no named arg version
 <img src="./demo/plural_1.png" />
+
 ``` dart
 Text(Strings.amount(counter))
 ```
-2. named arg version (recommend)
+- named arg version (recommend)
 <img src="./demo/plural_2.png" />
+
 ``` dart
 Text(
   Strings.clicked(
