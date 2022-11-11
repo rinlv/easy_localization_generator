@@ -23,4 +23,4 @@ gender.with_arg.female,Hello girl :) I am {name}.,你好姑娘 ：）I am {name}
 reset_locale,Reset Saved Language,重置保存的語言,إعادة تعيين اللغة المحفوظة,Zurücksetzen einer gespeicherten Sprache,Скінуць захаваную мову,Đặt lại ngôn ngữ đã lưu
 supported_language,Supported language: {language},支持的語言：{language},اللغات المدعومة: {language},Unterstützte Sprachen: {Sprache},"Мовы, якія падтрымліваюцца: {language}",Các ngôn ngữ được hỗ trợ: {language}
 msg,Hello {name} in the {type} world,您好 {name} 在 {type} 世界,مرحبًا {name} في {type} العالم,Hallo {name} in der Welt von {type},"Прывітанне, {name}, у свеце {type}",Xin chào {name} trong thế giới {type}
-hello,Hello -  {name} {},哈囉 -  {name} {},مرحبًا - {name} {},Hallo - {name} {},Прывітанне - {name} {},Xin chào - {name} {}
+hello,Hello -  {name},哈囉 -  {name},مرحبًا - {name},Hallo - {Name},Прывітанне - {name},Xin chào - {name}
