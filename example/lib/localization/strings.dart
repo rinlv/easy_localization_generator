@@ -6,7 +6,7 @@ import 'package:easy_localization_generator/easy_localization_generator.dart';
 part 'strings.g.dart';
 
 @SheetLocalization(
-  docId: '1v2Y3e0Uvn0JTwHvsduNT70u7Fy9TG43DIcZYJxPu1ZA',
+  docId: '1hK27E8bIxU8rrOduGJWLTD2QRR1ALs6lyW7dPNZ3N74',
   version: 1,
   outDir: 'assets/langs',
   outName: 'langs.csv',
