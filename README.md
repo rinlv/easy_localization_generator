@@ -135,4 +135,4 @@ I find the [easy_localization](https://pub.dev/packages/easy_localization) has a
 
 ## OPTION 2: Easy Localization Generator with [flutter_gen](https://github.com/FlutterGen/flutter_gen)
 
-I forked and then added some code, which make Easy Localization Generator can working with it. Please checkout [here](https://github.com/rinlv/flutter_gen).
+I forked and then added some code, which make Easy Localization Generator can working with it. Please checkout [here](https://github.com/rinlv/flutter_gen/tree/easy_localization).
