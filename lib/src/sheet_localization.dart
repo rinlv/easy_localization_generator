@@ -5,6 +5,7 @@ class SheetLocalization {
   final String outDir; //output directory
   final String outName; //output file name
   final List<String> preservedKeywords;
+  final bool injectGenerationDateTime;
 
   const SheetLocalization({
     this.docId,
@@ -12,5 +13,6 @@ class SheetLocalization {
     this.outDir = 'resources/langs',
     this.outName = 'langs.csv',
     this.preservedKeywords = const [],
+    this.injectGenerationDateTime = true,
   });
 }

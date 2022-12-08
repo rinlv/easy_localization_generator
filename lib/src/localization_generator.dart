@@ -39,8 +39,11 @@ class LocalizationGenerator extends GeneratorForAnnotation<SheetLocalization> {
         Directory(path.join(current.path, output.path, outputFileName));
 
     final classBuilder = StringBuffer();
-    classBuilder.writeln(
-        '// Generated at: ${formatDateWithOffset(DateTime.now().toLocal())}');
+    if(annotation.read('injectGenerationDateTime').boolValue) {
+      classBuilder.writeln(
+          '// Generated at: ${formatDateWithOffset(DateTime.now().toLocal())}');
+    }
+
     classBuilder.writeln('class ${element.displayName.substring(1)}{');
 
     void readCsv(File file) {
