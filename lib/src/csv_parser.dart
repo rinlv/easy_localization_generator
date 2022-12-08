@@ -17,7 +17,7 @@ class CSVParser {
     return 'static const supportedLocales = [\n${locales.join(',\n')}\n];';
   }
 
-  String generateTranslationUsages(List<String?> preservedKeywords) {
+  String generateTranslationUsages(List<String?> preservedKeywords, bool immediateTranslationEnabled) {
     final List<Item> items = [];
 
     lines.getRange(1, lines.length).forEach((e) {
@@ -101,14 +101,18 @@ class CSVParser {
         if (args.isNotEmpty) {
           strBuilder.write('namedArgs: {');
           for (final String arg in args) {
-            strBuilder.write('\'$arg\': $arg.toString(), ');
+            strBuilder.write("'$arg': '\$$arg', ");
           }
           strBuilder.write('},');
         }
 
         strBuilder.writeln(');');
+      } else if (immediateTranslationEnabled) {
+        strBuilder.writeln(
+            "static String get ${_joinKey(keyParts)} => '${item.key}'.tr();");
       } else {
-        strBuilder.writeln('static String get ${_joinKey(keyParts)} => \'${item.key}\'.tr();');
+        strBuilder
+            .writeln("static const ${_joinKey(keyParts)} = '${item.key}';");
       }
     }
 

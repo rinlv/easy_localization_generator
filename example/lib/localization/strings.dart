@@ -9,6 +9,8 @@ part 'strings.g.dart';
 @SheetLocalization(
   // Remove (or comment out) this to use the local file
   docId: '1hK27E8bIxU8rrOduGJWLTD2QRR1ALs6lyW7dPNZ3N74',
+  injectGenerationDateTime: true,
+  immediateTranslationEnabled: true,
   version: 2,
   outDir: 'assets/langs',
   outName: 'langs.csv',

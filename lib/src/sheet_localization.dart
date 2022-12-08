@@ -6,6 +6,8 @@ class SheetLocalization {
   final String outName; //output file name
   final List<String> preservedKeywords;
   final bool injectGenerationDateTime;
+  final bool immediateTranslationEnabled;
+
 
   const SheetLocalization({
     this.docId,
@@ -14,5 +16,6 @@ class SheetLocalization {
     this.outName = 'langs.csv',
     this.preservedKeywords = const [],
     this.injectGenerationDateTime = true,
+    this.immediateTranslationEnabled = true,
   });
 }

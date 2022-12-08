@@ -28,6 +28,9 @@ class LocalizationGenerator extends GeneratorForAnnotation<SheetLocalization> {
     final docId = annotation.read('docId');
     final outputDir = annotation.read('outDir').stringValue;
     final outputFileName = annotation.read('outName').stringValue;
+    final injectGenerationDateTime = annotation.read('injectGenerationDateTime').boolValue;
+    final immediateTranslationEnabled = annotation.read('immediateTranslationEnabled').boolValue;
+
     final preservedKeywords = annotation
         .read('preservedKeywords')
         .listValue
@@ -39,7 +42,7 @@ class LocalizationGenerator extends GeneratorForAnnotation<SheetLocalization> {
         Directory(path.join(current.path, output.path, outputFileName));
 
     final classBuilder = StringBuffer();
-    if(annotation.read('injectGenerationDateTime').boolValue) {
+    if(injectGenerationDateTime) {
       classBuilder.writeln(
           '// Generated at: ${formatDateWithOffset(DateTime.now().toLocal())}');
     }
@@ -52,7 +55,7 @@ class LocalizationGenerator extends GeneratorForAnnotation<SheetLocalization> {
 
       classBuilder.writeln(csvParser.getSupportedLocales());
       classBuilder
-          .writeln(csvParser.generateTranslationUsages(preservedKeywords));
+          .writeln(csvParser.generateTranslationUsages(preservedKeywords, immediateTranslationEnabled));
     }
 
     if (docId.isNull) {
