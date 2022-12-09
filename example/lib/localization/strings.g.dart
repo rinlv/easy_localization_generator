@@ -6,7 +6,7 @@ part of 'strings.dart';
 // LocalizationGenerator
 // **************************************************************************
 
-// Generated at: Tue, 15 Nov 2022 01:16:49 +08:00
+// Generated at: Fri, 09 Dec 2022 10:04:45 +07:00
 class Strings {
   static const supportedLocales = [
     Locale('en', 'US'),
@@ -18,20 +18,17 @@ class Strings {
   ];
 
   // title
-  static String get title => 'title'.tr();
+  static const title = 'title';
 
   // clickMe
-  static String get clickMe => 'clickMe'.tr();
+  static const clickMe = 'clickMe';
 
   // profile
-  static String get profile => 'profile'.tr();
-  static String get profileResetPassword => 'profile.reset_password'.tr();
-  static String get profileResetPasswordLabel =>
-      'profile.reset_password.label'.tr();
-  static String get profileResetPasswordUsername =>
-      'profile.reset_password.username'.tr();
-  static String get profileResetPasswordPassword =>
-      'profile.reset_password.password'.tr();
+  static const profile = 'profile';
+  static const profileResetPassword = 'profile.reset_password';
+  static const profileResetPasswordLabel = 'profile.reset_password.label';
+  static const profileResetPasswordUsername = 'profile.reset_password.username';
+  static const profileResetPasswordPassword = 'profile.reset_password.password';
 
   // clicked
   static String clicked(
@@ -41,7 +38,7 @@ class Strings {
       'clicked'.plural(
         countForUnit,
         namedArgs: {
-          'count': count.toString(),
+          'count': '$count',
         },
       );
 
@@ -54,18 +51,18 @@ class Strings {
       );
 
   // gender
-  static String get gender => 'gender'.tr();
+  static const gender = 'gender';
   static String genderWithArg({
     required dynamic name,
   }) =>
       'gender.with_arg'.tr(
         namedArgs: {
-          'name': name.toString(),
+          'name': '$name',
         },
       );
 
   // reset
-  static String get resetLocale => 'reset_locale'.tr();
+  static const resetLocale = 'reset_locale';
 
   // supported
   static String supportedLanguage({
@@ -73,7 +70,7 @@ class Strings {
   }) =>
       'supported_language'.tr(
         namedArgs: {
-          'language': language.toString(),
+          'language': '$language',
         },
       );
 
@@ -84,8 +81,8 @@ class Strings {
   }) =>
       'msg'.tr(
         namedArgs: {
-          'name': name.toString(),
-          'type': type.toString(),
+          'name': '$name',
+          'type': '$type',
         },
       );
 
@@ -95,7 +92,7 @@ class Strings {
   }) =>
       'hello'.tr(
         namedArgs: {
-          'name': name.toString(),
+          'name': '$name',
         },
       );
 }

@@ -1,3 +1,8 @@
+## [0.3.0]
+- Recover ability to use translation keys instead of ready translations
+- Add the generation bool parameter to inject (or not) generation DateTime
+- Use a local CSV file if Google sheet id not provided
+
 ## [0.2.0]
 - Use named-arg function to translate arg-string and plural-string
 
