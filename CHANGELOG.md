@@ -1,3 +1,7 @@
+## [0.3.1]
+- Upgrade Dart version to v3.0
+- Upgrade packages to newest
+
 ## [0.3.0]
 - Recover the ability to use translation keys instead of ready translations
 - Add the generation bool parameter to inject (or not) generation DateTime
