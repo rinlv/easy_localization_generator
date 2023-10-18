@@ -7,7 +7,9 @@ class CSVParser {
   final String strings;
   final List<List<dynamic>> lines;
 
-  CSVParser(this.strings, {this.fieldDelimiter = ','}) : lines = CsvToListConverter().convert(strings, fieldDelimiter: fieldDelimiter);
+  CSVParser(this.strings, {this.fieldDelimiter = ','})
+      : lines = CsvToListConverter()
+            .convert(strings, fieldDelimiter: fieldDelimiter);
 
   String getSupportedLocales() {
     final locales = lines.first.sublist(1, lines.first.length).map((e) {
@@ -17,7 +19,8 @@ class CSVParser {
     return 'static const supportedLocales = [\n${locales.join(',\n')}\n];';
   }
 
-  String generateTranslationUsages(List<String?> preservedKeywords, bool immediateTranslationEnabled) {
+  String generateTranslationUsages(
+      List<String?> preservedKeywords, bool immediateTranslationEnabled) {
     final List<Item> items = [];
 
     lines.getRange(1, lines.length).forEach((e) {
@@ -120,7 +123,8 @@ class CSVParser {
   }
 
   /// store key to List and ignore preserved-keyword-key
-  void _checkAndAddItem(List<String?> preservedKeywords, List<Item> itemList, Item item) {
+  void _checkAndAddItem(
+      List<String?> preservedKeywords, List<Item> itemList, Item item) {
     final keyParts = item.key.split('.');
 
     final isPlural = _checkIsPluralKey(keyParts);
@@ -137,7 +141,8 @@ class CSVParser {
         );
         continue;
       }
-      if (index == keyParts.length - 1 && preservedKeywords.contains(keyParts[index])) {
+      if (index == keyParts.length - 1 &&
+          preservedKeywords.contains(keyParts[index])) {
         continue;
       }
       _addNewItemToList(
@@ -152,7 +157,8 @@ class CSVParser {
   }
 
   void _addNewItemToList(List<Item> pairList, Item pair) {
-    final isExist = pairList.where((element) => element.key == pair.key).isNotEmpty;
+    final isExist =
+        pairList.where((element) => element.key == pair.key).isNotEmpty;
     if (!isExist) {
       pairList.add(pair);
     }
@@ -170,9 +176,11 @@ class CSVParser {
     return pluralKeywords.contains(keyParts.last);
   }
 
-  String _capitalize(String str) => '${str[0].toUpperCase()}${str.substring(1)}';
+  String _capitalize(String str) =>
+      '${str[0].toUpperCase()}${str.substring(1)}';
 
   String _normalize(String str) => '${str[0].toLowerCase()}${str.substring(1)}';
 
-  String _joinKey(List<String> keys) => _normalize(keys.map((e) => _capitalize(e)).toList().join());
+  String _joinKey(List<String> keys) =>
+      _normalize(keys.map((e) => _capitalize(e)).toList().join());
 }
