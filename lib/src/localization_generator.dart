@@ -50,15 +50,20 @@ class LocalizationGenerator extends GeneratorForAnnotation<SheetLocalization> {
     classBuilder.writeln('class ${element.displayName.substring(1)}{');
 
     void readCsv(File file) {
-      final data = file.readAsStringSync();
-      final csvParser = CSVParser(data);
+      final data = file.readAsStringSync().replaceAllMapped(RegExp(r'\n'), (match) {
+        if (match.group(0) == '\r\n') {
+          return match.group(0) ?? "";
+        }
+        return '\r\n';
+      });
 
+      final csvParser = CSVParser(data);
       classBuilder.writeln(csvParser.getSupportedLocales());
       classBuilder
           .writeln(csvParser.generateTranslationUsages(preservedKeywords, immediateTranslationEnabled));
     }
 
-    if (docId.isNull) {
+    if (docId.isNull || docId.stringValue.isEmpty) {
       print("docId is null, going to use the file ${outputPath.path}");
       final localFile = File(outputPath.path);
       if (!localFile.existsSync()) {
