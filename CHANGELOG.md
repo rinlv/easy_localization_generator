@@ -1,6 +1,9 @@
+## [0.3.2]
+- Upgrade packages to latest
+
 ## [0.3.1]
 - Upgrade Dart version to v3.0
-- Upgrade packages to newest
+- Upgrade packages to latest
 
 ## [0.3.0]
 - Recover the ability to use translation keys instead of ready translations
