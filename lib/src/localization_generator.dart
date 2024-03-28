@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:analyzer/dart/element/element.dart';
@@ -12,7 +13,8 @@ import 'csv_parser.dart';
 import 'sheet_localization.dart';
 
 class LocalizationGenerator extends GeneratorForAnnotation<SheetLocalization> {
-  static const _urlFormat = 'https://docs.google.com/spreadsheets/export?format=csv&id=';
+  static const _urlFormat =
+      'https://docs.google.com/spreadsheets/export?format=csv&id=';
   static const _headers = {
     'Content-Type': 'text/csv; charset=utf-8',
     'Accept': '*/*'
@@ -25,11 +27,14 @@ class LocalizationGenerator extends GeneratorForAnnotation<SheetLocalization> {
 
   Future<String> _generateSource(
       Element element, ConstantReader annotation) async {
+    final lineSeparator = annotation.read('lineSeparator').stringValue;
     final docId = annotation.read('docId');
     final outputDir = annotation.read('outDir').stringValue;
     final outputFileName = annotation.read('outName').stringValue;
-    final injectGenerationDateTime = annotation.read('injectGenerationDateTime').boolValue;
-    final immediateTranslationEnabled = annotation.read('immediateTranslationEnabled').boolValue;
+    final injectGenerationDateTime =
+        annotation.read('injectGenerationDateTime').boolValue;
+    final immediateTranslationEnabled =
+        annotation.read('immediateTranslationEnabled').boolValue;
 
     final preservedKeywords = annotation
         .read('preservedKeywords')
@@ -42,7 +47,7 @@ class LocalizationGenerator extends GeneratorForAnnotation<SheetLocalization> {
         Directory(path.join(current.path, output.path, outputFileName));
 
     final classBuilder = StringBuffer();
-    if(injectGenerationDateTime) {
+    if (injectGenerationDateTime) {
       classBuilder.writeln(
           '// Generated at: ${formatDateWithOffset(DateTime.now().toLocal())}');
     }
@@ -51,14 +56,13 @@ class LocalizationGenerator extends GeneratorForAnnotation<SheetLocalization> {
 
     void readCsv(File file) {
       final data = file.readAsStringSync();
-      final csvParser = CSVParser(data);
-
+      final csvParser = CSVParser(LineSplitter().convert(data).join("\r\n"));
       classBuilder.writeln(csvParser.getSupportedLocales());
-      classBuilder
-          .writeln(csvParser.generateTranslationUsages(preservedKeywords, immediateTranslationEnabled));
+      classBuilder.writeln(csvParser.generateTranslationUsages(
+          preservedKeywords, immediateTranslationEnabled));
     }
 
-    if (docId.isNull) {
+    if (docId.isNull || docId.stringValue.isEmpty) {
       print("docId is null, going to use the file ${outputPath.path}");
       final localFile = File(outputPath.path);
       if (!localFile.existsSync()) {
@@ -67,8 +71,7 @@ class LocalizationGenerator extends GeneratorForAnnotation<SheetLocalization> {
 
       readCsv(localFile);
     } else {
-      final response = await http.get(
-          Uri.parse(_urlFormat + docId.stringValue),
+      final response = await http.get(Uri.parse(_urlFormat + docId.stringValue),
           headers: _headers);
       if (response.statusCode != 200) {
         throw Exception('http reasonPhrase: ${response.reasonPhrase}');
@@ -78,7 +81,15 @@ class LocalizationGenerator extends GeneratorForAnnotation<SheetLocalization> {
       if (!generatedFile.existsSync()) {
         generatedFile.createSync(recursive: true);
       }
+
       generatedFile.writeAsBytesSync(response.bodyBytes);
+
+      final formatString = LineSplitter()
+          .convert(generatedFile.readAsStringSync())
+          .join(lineSeparator);
+
+      generatedFile.writeAsStringSync(formatString);
+
       readCsv(generatedFile);
     }
     classBuilder.writeln('}');

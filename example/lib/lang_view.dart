@@ -34,20 +34,45 @@ class LanguageView extends StatelessWidget {
                 ),
               ),
             ),
-            buildSwitchListTileMenuItem(context: context, title: 'English', subtitle: 'English', locale: context.supportedLocales[0]),
+            buildSwitchListTileMenuItem(
+                context: context,
+                title: 'English',
+                subtitle: 'English',
+                locale: context.supportedLocales[0]),
             buildDivider(),
             buildSwitchListTileMenuItem(
-                context: context, title: 'Chinese', subtitle: 'Chinese', locale: context.supportedLocales[1] //BuildContext extension method
+                context: context,
+                title: 'Chinese',
+                subtitle: 'Chinese',
+                locale:
+                    context.supportedLocales[1] //BuildContext extension method
                 ),
             buildDivider(),
-            buildSwitchListTileMenuItem(context: context, title: 'عربي', subtitle: 'عربي', locale: context.supportedLocales[2] //BuildContext extension method
+            buildSwitchListTileMenuItem(
+                context: context,
+                title: 'عربي',
+                subtitle: 'عربي',
+                locale:
+                    context.supportedLocales[2] //BuildContext extension method
                 ),
             buildDivider(),
-            buildSwitchListTileMenuItem(context: context, title: 'German', subtitle: 'German', locale: context.supportedLocales[3]),
+            buildSwitchListTileMenuItem(
+                context: context,
+                title: 'German',
+                subtitle: 'German',
+                locale: context.supportedLocales[3]),
             buildDivider(),
-            buildSwitchListTileMenuItem(context: context, title: 'Русский', subtitle: 'Русский', locale: context.supportedLocales[4]),
+            buildSwitchListTileMenuItem(
+                context: context,
+                title: 'Русский',
+                subtitle: 'Русский',
+                locale: context.supportedLocales[4]),
             buildDivider(),
-            buildSwitchListTileMenuItem(context: context, title: 'Vietnamese', subtitle: 'Vietnamese', locale: context.supportedLocales[5]),
+            buildSwitchListTileMenuItem(
+                context: context,
+                title: 'Vietnamese',
+                subtitle: 'Vietnamese',
+                locale: context.supportedLocales[5]),
             buildDivider(),
           ],
         ),
@@ -64,7 +89,11 @@ class LanguageView extends StatelessWidget {
         ),
       );
 
-  Container buildSwitchListTileMenuItem({required BuildContext context, String? title, String? subtitle, Locale? locale}) {
+  Container buildSwitchListTileMenuItem(
+      {required BuildContext context,
+      String? title,
+      String? subtitle,
+      Locale? locale}) {
     return Container(
       margin: EdgeInsets.only(
         left: 10,
@@ -81,7 +110,8 @@ class LanguageView extends StatelessWidget {
             subtitle ?? '',
           ),
           onTap: () {
-            context.setLocale(locale ?? Locale('en', 'US')); //BuildContext extension method
+            context.setLocale(
+                locale ?? Locale('en', 'US')); //BuildContext extension method
             Navigator.pop(context);
           }),
     );

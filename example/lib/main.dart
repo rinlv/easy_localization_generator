@@ -83,7 +83,8 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (_) => LanguageView(), fullscreenDialog: true),
+                MaterialPageRoute(
+                    builder: (_) => LanguageView(), fullscreenDialog: true),
               );
             },
           ),
@@ -96,14 +97,22 @@ class _MyHomePageState extends State<MyHomePage> {
             Spacer(
               flex: 1,
             ),
-            Text(Strings.supportedLanguage(language: Strings.supportedLocales.length.toString()),
-                style: TextStyle(color: Colors.grey.shade600, fontSize: 19, fontWeight: FontWeight.bold)),
+            Text(
+                Strings.supportedLanguage(
+                    language: Strings.supportedLocales.length.toString()),
+                style: TextStyle(
+                    color: Colors.grey.shade600,
+                    fontSize: 19,
+                    fontWeight: FontWeight.bold)),
             Spacer(
               flex: 1,
             ),
             Text(
               Strings.gender,
-              style: TextStyle(color: Colors.grey.shade600, fontSize: 19, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  color: Colors.grey.shade600,
+                  fontSize: 19,
+                  fontWeight: FontWeight.bold),
             ).tr(gender: _gender ? 'female' : 'male'),
             Center(child: Switch(value: _gender, onChanged: switchGender)),
             Spacer(
