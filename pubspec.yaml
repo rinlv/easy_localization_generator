@@ -14,10 +14,10 @@ dependencies:
   build: ^2.4.1
   build_config: ^1.1.1
   source_gen: ^1.4.0
-  http: ^1.1.0
+  http: ^1.2.1
   path: ^1.8.3
-  csv: ^5.1.1
-  intl: ^0.18.1
+  csv: ^6.0.0
+  intl: ^0.19.0
   analyzer: ^6.2.0
 
 dev_dependencies:
