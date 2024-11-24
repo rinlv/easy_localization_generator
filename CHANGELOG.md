@@ -1,3 +1,7 @@
+## [0.3.3]
+- Upgrade packages to latest
+- Merged PR [#14](https://github.com/rinlv/easy_localization_generator/pull/14) and [#16](https://github.com/rinlv/easy_localization_generator/pull/16)
+
 ## [0.3.2]
 - Upgrade packages to latest
 

@@ -1,6 +1,6 @@
 name: easy_localization_generator
 description: Generates the localization keys from an online Google Sheet or a local csv file.
-version: 0.3.2
+version: 0.3.3
 # author: Rin Luu Van <rinlv.hn@gmail.com>
 homepage: https://github.com/rinlv/easy_localization_generator
 issue_tracker: https://github.com/rinlv/easy_localization_generator/issues
