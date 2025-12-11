@@ -6,7 +6,7 @@ homepage: https://github.com/rinlv/easy_localization_generator
 issue_tracker: https://github.com/rinlv/easy_localization_generator/issues
 
 environment:
-  sdk: ">=3.3.0 <4.0.0"
+  sdk: ^3.10.1
 
 dependencies:
   flutter:
